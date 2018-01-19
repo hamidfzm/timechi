@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Jumbotron, Container, Row, Col} from 'reactstrap';
 
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
 
 class Home extends Component {
     render() {
