@@ -28,6 +28,7 @@ class App extends Component {
                     <div>
                         <Route exact path="/" component={routes.Home}/>
                         <Route path="/login" component={routes.Login}/>
+                        <Route path="/dashboard" component={routes.Dashboard}/>
                     </div>
                 </ConnectedRouter>
             </Provider>
