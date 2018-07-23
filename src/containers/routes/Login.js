@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import {connect} from 'react-redux';
+
 import {
     Container,
     Row,
@@ -10,9 +12,13 @@ import {
 
 import {Login as LoginFrom} from '../forms';
 import Navbar from '../Navbar';
+import {Login} from '../../actions';
 
 class CustomRoute extends Component {
+
     render() {
+        const {onSubmit} = this.props;
+
         return (
             <div>
                 <Navbar/>
@@ -22,7 +28,7 @@ class CustomRoute extends Component {
                             <Card>
                                 <CardHeader>Login</CardHeader>
                                 <CardBody>
-                                    <LoginFrom/>
+                                    <LoginFrom onSubmit={onSubmit}/>
                                 </CardBody>
                             </Card>
                         </Col>
@@ -33,4 +39,14 @@ class CustomRoute extends Component {
     }
 }
 
-export default CustomRoute;
+
+const mapDispatchToProps = (dispatch) => {
+    return {
+        onSubmit: (values) => dispatch(Login(...values)),
+    }
+};
+
+export default connect(
+    null,
+    mapDispatchToProps
+)(CustomRoute);
