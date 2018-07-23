@@ -3,7 +3,7 @@ import {Jumbotron, Container, Row, Col} from 'reactstrap';
 
 import Navbar from '../Navbar';
 
-class Home extends Component {
+class CustomRoute extends Component {
     render() {
         return (
             <div>
@@ -23,4 +23,4 @@ class Home extends Component {
     }
 }
 
-export default Home;
+export default CustomRoute;
