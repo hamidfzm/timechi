@@ -8,6 +8,7 @@ import {
     NavItem,
     NavLink,
 } from 'reactstrap';
+import {withRouter} from 'react-router';
 
 class CustomNavbar extends Component {
     constructor(props) {
@@ -25,15 +26,25 @@ class CustomNavbar extends Component {
     }
 
     render() {
+        const {location: {pathname}} = this.props;
         return (
             <Navbar color="faded" light expand="md">
                 <NavbarBrand href="/">Timechi</NavbarBrand>
                 <NavbarToggler onClick={() => this.toggle()}/>
                 <Collapse isOpen={this.state.isOpen} navbar>
                     <Nav className="ml-auto" navbar>
-                        <NavItem>
-                            <NavLink href="/login">Login</NavLink>
-                        </NavItem>
+                        {
+                            pathname !== '/register' &&
+                            <NavItem>
+                                <NavLink href="/register">Register</NavLink>
+                            </NavItem>
+                        }
+                        {
+                            pathname !== '/login' &&
+                            <NavItem>
+                                <NavLink href="/login">Login</NavLink>
+                            </NavItem>
+                        }
                     </Nav>
                 </Collapse>
             </Navbar>
@@ -41,4 +52,4 @@ class CustomNavbar extends Component {
     }
 }
 
-export default CustomNavbar;
+export default withRouter(CustomNavbar);

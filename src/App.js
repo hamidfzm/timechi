@@ -27,6 +27,7 @@ class App extends Component {
                 <ConnectedRouter history={history}>
                     <div>
                         <Route exact path="/" component={routes.Home}/>
+                        <Route path="/register" component={routes.Register}/>
                         <Route path="/login" component={routes.Login}/>
                         <Route path="/dashboard" component={routes.Dashboard}/>
                     </div>
