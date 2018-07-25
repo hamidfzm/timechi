@@ -11,6 +11,8 @@ import {
     Button,
     Input
 } from 'reactstrap';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faPlay} from '@fortawesome/free-solid-svg-icons'
 
 import Navbar from '../Navbar';
 
@@ -20,18 +22,20 @@ class CustomRoute extends Component {
             <div>
                 <Navbar/>
                 <Container>
-                    <Card className='mb-3 px-3'>
+                    <Card className='mb-3'>
                         <CardBody>
                             <Row>
                                 <Col md={8}>
                                     <Input placeholder='What are you working on?'/>
 
                                 </Col>
-                                <Col md={2}>
+                                <Col md={2} className='p-2 text-center'>
                                     00:00:00
                                 </Col>
                                 <Col md={2}>
-                                    <Button className='fa fa-play'/>
+                                    <Button className='btn-link border-0'>
+                                        <FontAwesomeIcon icon={faPlay}/>
+                                    </Button>
                                 </Col>
 
                             </Row>
@@ -52,9 +56,9 @@ class CustomRoute extends Component {
                             </CardTitle>
                             <ListGroup>
 
-                                <ListGroupItem>
+                                <ListGroupItem action>
                                     <Row>
-                                        <Col md={8}>
+                                        <Col md={7}>
                                             Working on test
                                         </Col>
                                         <Col md={2}>
@@ -65,9 +69,9 @@ class CustomRoute extends Component {
                                         </Col>
                                     </Row>
                                 </ListGroupItem>
-                                <ListGroupItem>
+                                <ListGroupItem action>
                                     <Row>
-                                        <Col md={8}>
+                                        <Col md={7}>
                                             Working on test
                                         </Col>
                                         <Col md={2}>
@@ -78,67 +82,9 @@ class CustomRoute extends Component {
                                         </Col>
                                     </Row>
                                 </ListGroupItem>
-                                <ListGroupItem>
+                                <ListGroupItem action>
                                     <Row>
-                                        <Col md={8}>
-                                            Working on test
-                                        </Col>
-                                        <Col md={2}>
-                                            11:45 - 12:30
-                                        </Col>
-                                        <Col md={2}>
-                                            00:45:00
-                                        </Col>
-                                    </Row>
-                                </ListGroupItem>
-                            </ListGroup>
-                        </CardBody>
-
-                    </Card>
-                    <Card className='mb-3'>
-
-                        <CardBody>
-                            <CardTitle>
-                                <Row>
-                                    <Col md={10}>
-                                        Fir, 11 September
-                                    </Col>
-                                    <Col md={2}>
-                                        00:45:00
-                                    </Col>
-                                </Row>
-                            </CardTitle>
-                            <ListGroup>
-
-                                <ListGroupItem>
-                                    <Row>
-                                        <Col md={8}>
-                                            Working on test
-                                        </Col>
-                                        <Col md={2}>
-                                            11:45 - 12:30
-                                        </Col>
-                                        <Col md={2}>
-                                            00:45:00
-                                        </Col>
-                                    </Row>
-                                </ListGroupItem>
-                                <ListGroupItem>
-                                    <Row>
-                                        <Col md={8}>
-                                            Working on test
-                                        </Col>
-                                        <Col md={2}>
-                                            11:45 - 12:30
-                                        </Col>
-                                        <Col md={2}>
-                                            00:45:00
-                                        </Col>
-                                    </Row>
-                                </ListGroupItem>
-                                <ListGroupItem>
-                                    <Row>
-                                        <Col md={8}>
+                                        <Col md={7}>
                                             Working on test
                                         </Col>
                                         <Col md={2}>
