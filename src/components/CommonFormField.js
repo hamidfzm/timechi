@@ -5,7 +5,6 @@ import {
     Input,
     FormFeedback,
 } from 'reactstrap';
-import {Field} from 'redux-form';
 
 
 class CustomComponent extends Component {
@@ -48,7 +47,6 @@ class CustomComponent extends Component {
 
 CustomComponent.propTypes = {
     ...Input.propTypes,
-    ...Field.propTypes,
 };
 
 export default CustomComponent;
