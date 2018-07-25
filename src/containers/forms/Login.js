@@ -15,22 +15,22 @@ class CustomForm extends Component {
 
         return (
             <Form noValidate onSubmit={handleSubmit}>
-                <Field name={'email'}
-                       type={'email'}
+                <Field name='email'
+                       type='email'
                        component={CommonFormField}
-                       placeholder={'Input your email address'}
-                       label={'Email'}
+                       placeholder='Input your email address'
+                       label='Email'
                        disabled={submitting}
-                       returnKeyType={'next'}
+                       returnKeyType='next'
                        validate={[validations.required, validations.email]}/>
-                <Field name={'password'}
-                       type={'password'}
+                <Field name='password'
+                       type='password'
                        component={CommonFormField}
-                       placeholder={'Input your password'}
-                       label={'Password'}
+                       placeholder='Input your password'
+                       label='Password'
                        disabled={submitting}
                        validate={[validations.required, validations.minLength(6)]}/>
-                <Button disabled={submitting} type={'submit'} color={'primary'} block>Submit</Button>
+                <Button disabled={submitting} type='submit' color='primary' block>Submit</Button>
             </Form>
         );
     }
